@@ -1,7 +1,7 @@
 @media only screen and (max-width: 768px) {
 
     * {
-        font-family: 'Space Mono', monospace;
+        font-family: 'Smooch Sans', sans-serif;
     }
         
       body {
@@ -12,7 +12,7 @@
     .names1 {
         color: hsl(186, 14%, 43%);
         font-weight: 700;
-        margin-left: 50px;
+        margin-left: 40px;
         font-size: 30px;
     }
     
@@ -50,6 +50,12 @@
         flex-wrap: wrap;
         width: 400px;
     
+    }
+
+    .fleBoxItem1 {
+        margin-top: 20px;
+
+
     }
     
     .buttom {
@@ -103,22 +109,24 @@
     }
     
     input {
-        text-align: right;
+        text-align: left;
         width: 300px;
         color: hsl(184, 14%, 56%);
         font-weight: 700;
-        font-size: 20px;
+        font-size: 30px;
         background-color: hsl(189, 41%, 97%);
         padding: 7px;
         border-radius: 10px;
         margin-top: 7px;
+        margin-left: 40px;
+        
     }
     
     .flex {
         display: block;
         background-color: #F56C66;
         padding: 50px;
-        width: 300px;
+        width: 250px;
         height: 150px;
         border-radius: 15px;
         margin-left: auto;
@@ -170,7 +178,7 @@
         color: #F56C66;
         background-color: white;
         top: 60px;
-        right: -30px;
+        right: 5px;
         font-size: 20px;
     
     }
@@ -250,7 +258,7 @@
         align-items: center;
         margin: 300px;
         background-color: white;
-        width: 800px;
+        width: 850px;
         height: 500px;
         margin-left: auto;
         margin-right: auto;
@@ -265,9 +273,12 @@
         display: flex;
         flex-wrap: nowrap;
         width: 450px;
-    
     }
     
+    .fleBoxItem1 {
+        margin-top: 50px;
+    }
+
     .buttom {
         width: 40%;
         height: 60px;
@@ -305,7 +316,7 @@
     }
     
     input {
-        text-align: right;
+        text-align: left;
         width: 300px;
         color: hsl(184, 14%, 56%);
         font-weight: 700;
@@ -314,6 +325,7 @@
         padding: 7px;
         border-radius: 10px;
         margin-top: 7px;
+        margin-left: 40px;
     }
     
     .flex {
@@ -321,6 +333,7 @@
         background-color: #F56C66;
         padding: 50px;
         margin-right: 40px;
+        margin-left: 60px;
         width: 200px;
         height: 300px;
         border-radius: 15px;

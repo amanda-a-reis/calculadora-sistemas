@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- displays site properly based on user's device -->
 
-    
-
     <title>Calculadore | Sistemas de Numeração</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Smooch+Sans:wght@600&display=swap"
@@ -17,23 +15,8 @@
 
   <body>
     <main>
-        
       <div class="flexBox1">
-        <div class="fleBoxItem1">
-            <div><p id="p">Selecione a conversão antes de digitar.</p></div>
-          <div class="names1">Digite seu número</div>
-          
-          <div>
-            <input
-              type="text"
-              id="value"
-              class="text"
-              placeholder="0"
-              autocomplete="off"
-              oninput="getValue()"
-            />
-          </div>
-
+        <div>
           <div class="names">De</div>
           <div class="flexBox2">
             <button onclick="seleciona(1)" class="buttom1" id="botao1">
@@ -63,6 +46,19 @@
             <button onclick="seleciona(8)" class="buttom" id="botao8">
               Binário
             </button>
+          </div>
+          <div class="fleBoxItem1">
+            <div class="names1">Digite seu número</div>
+            <div>
+              <input
+                type="text"
+                id="value"
+                class="text"
+                placeholder="0"
+                autocomplete="off"
+                oninput="getValue()"
+              />
+            </div>
           </div>
         </div>
 

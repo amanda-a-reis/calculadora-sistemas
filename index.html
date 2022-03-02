@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    
+
+    <title>Calculadore | Sistemas de Numeração</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Smooch+Sans:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+
+  <body>
+    <main>
+        
+      <div class="flexBox1">
+        <div class="fleBoxItem1">
+            <div><p id="p">Selecione a conversão antes de digitar.</p></div>
+          <div class="names1">Digite seu número</div>
+          
+          <div>
+            <input
+              type="text"
+              id="value"
+              class="text"
+              placeholder="0"
+              autocomplete="off"
+              oninput="getValue()"
+            />
+          </div>
+
+          <div class="names">De</div>
+          <div class="flexBox2">
+            <button onclick="seleciona(1)" class="buttom1" id="botao1">
+              Decimal
+            </button>
+            <button onclick="seleciona(2)" class="buttom" id="botao2">
+              Octal
+            </button>
+            <button onclick="seleciona(3)" class="buttom" id="botao3">
+              Hexadecimal
+            </button>
+            <button onclick="seleciona(4)" class="buttom" id="botao4">
+              Binário
+            </button>
+          </div>
+          <p class="names">Para</p>
+          <div class="flexBox2">
+            <button onclick="seleciona(5)" class="buttom1" id="botao5">
+              Decimal
+            </button>
+            <button onclick="seleciona(6)" class="buttom" id="botao6">
+              Octal
+            </button>
+            <button onclick="seleciona(7)" class="buttom" id="botao7">
+              Hexadecimal
+            </button>
+            <button onclick="seleciona(8)" class="buttom" id="botao8">
+              Binário
+            </button>
+          </div>
+        </div>
+
+        <div class="flex">
+          <div>
+            <div class="amount">Conversão</div>
+            <div class="person" id="person"></div>
+            <div class="total" id="total">0</div>
+          </div>
+
+          <div><button id="reset" onclick="reset()">Reset</button></div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      Coded by
+      <a href="https://github.com/amanda-a-reis" target="_blank"
+        >Amanda Alves Reis</a
+      >
+    </footer>
+
+    <script src="./js/script.js"></script>
+  </body>
+</html>

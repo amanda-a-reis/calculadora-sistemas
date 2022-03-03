@@ -10,7 +10,9 @@ let botao8 = document.getElementById("botao8");
 let primeiroBotao = 0;
 let segundoBotao = 0;
 let valor = 0;
-
+let array = [];
+let roots = [];
+let total = 0;
 function getValue() {
   valor = document.getElementById("value").value;
 }
@@ -141,95 +143,198 @@ let myName = document.getElementById("person");
 
 function chamaCalculadora() {
   if (primeiroBotao == 1 && segundoBotao == 1) {
-    myTotal.innerHTML = valor;
-    myName.innerHTML = 'decimal / decimal';
+    total = valor;
+    array = valor.toString().split("");
+    roots = array.map(function (e) {
+      if (/[A-Za-z]/g.test(e)) {
+        total = 0;
+      }
+    });
+
+    myTotal.innerHTML = total;
+    myName.innerHTML = "decimal / decimal";
   }
   if (primeiroBotao == 1 && segundoBotao == 2) {
-    convertido = converteDecimalOctal(valor);
+    total = valor;
+    array = valor.toString().split("");
+    roots = array.map(function (e) {
+      if (/[A-Za-z]/g.test(e)) {
+        total = 0;
+      }
+    });
+
+    convertido = converteDecimalOctal(total);
     myTotal.innerHTML = convertido;
-    myName.innerHTML = 'decimal / octal';
+    myName.innerHTML = "decimal / octal";
   }
   if (primeiroBotao == 1 && segundoBotao == 3) {
-    convertido = converteDecimalHexadecimal(valor);
+    total = valor;
+    array = valor.toString().split("");
+    roots = array.map(function (e) {
+      if (/[A-Za-z]/g.test(e)) {
+        total = 0;
+      }
+    });
+
+    convertido = converteDecimalHexadecimal(total);
     myTotal.innerHTML = convertido;
-    myName.innerHTML = 'decimal / hexadecimal';
+    myName.innerHTML = "decimal / hexadecimal";
   }
   if (primeiroBotao == 1 && segundoBotao == 4) {
-    convertido = converteDecimalBinario(valor);
+    total = valor;
+    array = valor.toString().split("");
+    roots = array.map(function (e) {
+      if (/[A-Za-z]/g.test(e)) {
+        total = 0;
+      }
+    });
+
+    convertido = converteDecimalBinario(total);
     myTotal.innerHTML = convertido;
-    myName.innerHTML = 'decimal / binario';
+    myName.innerHTML = "decimal / binario";
   }
   if (primeiroBotao == 2 && segundoBotao == 1) {
     valor = valor.toString();
-    convertido = converteOctalDecimal(valor);
+
+    total = valor;
+    array = valor.split("");
+    roots = array.map(function (e) {
+      if (/[A-Za-z]/g.test(e)) {
+        total = "0";
+      }
+    });
+
+    convertido = converteOctalDecimal(total);
     myTotal.innerHTML = convertido;
-    myName.innerHTML = 'octal / decimal';
+    myName.innerHTML = "octal / decimal";
   }
   if (primeiroBotao == 2 && segundoBotao == 2) {
-    myTotal.innerHTML = valor;
-    myName.innerHTML = 'octal / octal';
+    total = valor;
+    array = valor.toString().split("");
+    roots = array.map(function (e) {
+      if (/[A-Za-z]/g.test(e)) {
+        total = "0";
+      }
+    });
+
+    myTotal.innerHTML = total;
+    myName.innerHTML = "octal / octal";
   }
   if (primeiroBotao == 2 && segundoBotao == 3) {
     valor = valor.toString();
-    convertido2 = converteOctalDecimal(valor);
+
+    total = valor;
+    array = valor.split("");
+    roots = array.map(function (e) {
+      if (/[A-Za-z]/g.test(e)) {
+        total = "0";
+      }
+    });
+
+    convertido2 = converteOctalDecimal(total);
     convertido = converteDecimalHexadecimal(convertido2);
     myTotal.innerHTML = convertido;
-    myName.innerHTML = 'octal / hexadecimal';
+    myName.innerHTML = "octal / hexadecimal";
   }
   if (primeiroBotao == 2 && segundoBotao == 4) {
     valor = valor.toString();
-    convertido2 = converteOctalDecimal(valor);
+
+    total = valor;
+    array = valor.split("");
+    roots = array.map(function (e) {
+      if (/[A-Za-z]/g.test(e)) {
+        total = "0";
+      }
+    });
+
+    convertido2 = converteOctalDecimal(total);
     convertido = converteDecimalBinario(convertido2);
     myTotal.innerHTML = convertido;
-    myName.innerHTML = 'octal / binário';
+    myName.innerHTML = "octal / binário";
   }
   if (primeiroBotao == 3 && segundoBotao == 1) {
     valor = valor.toString().toUpperCase();
     convertido = converteHexadecimalDecimal(valor);
     myTotal.innerHTML = convertido;
-    myName.innerHTML = 'hexadecimal / decimal';
+    myName.innerHTML = "hexadecimal / decimal";
   }
   if (primeiroBotao == 3 && segundoBotao == 2) {
     valor = valor.toString().toUpperCase();
     convertido2 = converteHexadecimalDecimal(valor);
     convertido = converteDecimalOctal(convertido2);
     myTotal.innerHTML = convertido;
-    myName.innerHTML = 'hexadecimal / octal';
+    myName.innerHTML = "hexadecimal / octal";
   }
   if (primeiroBotao == 3 && segundoBotao == 3) {
     myTotal.innerHTML = valor;
-    myName.innerHTML = 'hexadecimal / hexadecimal';
+    myName.innerHTML = "hexadecimal / hexadecimal";
   }
   if (primeiroBotao == 3 && segundoBotao == 4) {
     valor = valor.toString().toUpperCase();
     convertido2 = converteHexadecimalDecimal(valor);
     convertido = converteDecimalBinario(convertido2);
     myTotal.innerHTML = convertido;
-    myName.innerHTML = 'hexadecimal / binário';
+    myName.innerHTML = "hexadecimal / binário";
   }
   if (primeiroBotao == 4 && segundoBotao == 1) {
-    valor = valor.toString();
-    convertido = converteBinarioDecimal(valor);
+    valor = valor.toString().toUpperCase();
+
+    total = valor;
+    array = valor.split("");
+    roots = array.map(function (e) {
+      if (/[A-Za-z2-9]/g.test(e)) {
+        total = "0";
+      }
+    });
+
+    convertido = converteBinarioDecimal(total);
     myTotal.innerHTML = convertido;
-    myName.innerHTML = 'binário / decimal';
+    myName.innerHTML = "binário / decimal";
   }
   if (primeiroBotao == 4 && segundoBotao == 2) {
-    valor = valor.toString();
-    convertido2 = converteBinarioDecimal(valor);
+    valor = valor.toString().toUpperCase();
+
+    total = valor;
+    array = valor.split("");
+    roots = array.map(function (e) {
+      if (/[A-Za-z2-9]/g.test(e)) {
+        total = "0";
+      }
+    });
+
+    convertido2 = converteBinarioDecimal(total);
     convertido = converteDecimalOctal(convertido2);
     myTotal.innerHTML = convertido;
-    myName.innerHTML = 'binário / octal';
+    myName.innerHTML = "binário / octal";
   }
   if (primeiroBotao == 4 && segundoBotao == 3) {
     valor = valor.toString();
-    convertido2 = converteBinarioDecimal(valor);
+
+    total = valor;
+    array = valor.split("");
+    roots = array.map(function (e) {
+      if (/[A-Za-z2-9]/g.test(e)) {
+        total = "0";
+      }
+    });
+
+    convertido2 = converteBinarioDecimal(total);
     convertido = converteDecimalHexadecimal(convertido2);
     myTotal.innerHTML = convertido;
-    myName.innerHTML = 'binário / hexadecimal';
+    myName.innerHTML = "binário / hexadecimal";
   }
   if (primeiroBotao == 4 && segundoBotao == 4) {
-    myTotal.innerHTML = valor;
-    myName.innerHTML = 'binário / binário';
+    valor = valor.toString();
+    total = valor;
+    array = valor.split("");
+    roots = array.map(function (e) {
+      if (/[A-Za-z2-9]/g.test(e)) {
+        total = "0";
+      }
+    });
+
+    myTotal.innerHTML = total;
+    myName.innerHTML = "binário / binário";
   }
 }
 
@@ -237,7 +342,7 @@ function Temporizador(initiate) {
   if (initiate !== true) {
     chamaCalculadora();
   }
-  setTimeout(Temporizador, 1000);
+  setTimeout(Temporizador, 1);
 }
 
 Temporizador(true);
@@ -407,7 +512,7 @@ function converteBinarioDecimal(bin) {
   return sum;
 }
 
-let person = document.getElementById("person").value 
+let person = document.getElementById("person").value;
 
 function reset() {
   let reset = document.getElementById("reset");
@@ -436,33 +541,5 @@ function reset() {
   botao7.style.color = "white";
   botao8.style.background = "#F56C66";
   botao8.style.color = "white";
-}
-
-meuValor = document.getElementById("value");
-
-value.addEventListener("keypress", function (e) {
-  if (!checkChar(e)) {
-    e.preventDefault();
-  }
-});
-
-function checkChar(e) {
-  const char = String.fromCharCode(e.keyCode);
-
-  let pattern = "[A-Za-z0-9]";
-
-  if (primeiroBotao == 4) {
-      pattern = "[1/0]"
-  }
-
-  if (primeiroBotao == 1 || primeiroBotao == 2) {
-      pattern = "[0-9]"
-  }
-
-   if (char.match(pattern)) {
-    console.log(char);
-    return true;
-    
-  }
 }
 
